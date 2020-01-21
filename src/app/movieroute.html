@@ -1,0 +1,21 @@
+ 
+   <!-- Genres -->
+
+  <form>
+    <div class="form-group">
+      Genres: 
+      <select id="genreSelect" name="genreSelect" (change)="getMovies()"
+        [(ngModel)]="selectedGenreId" class="form-control">
+        <option *ngFor="let genre of _genreArray" value="{{genre.id}}">{{genre.name}}</option>
+      </select>
+    </div>
+  </form>
+  
+  <!-- Movies -->
+  <div id=container>
+    <ul *ngFor="let movie of _movieArray | paginate: { itemsPerPage: 20, currentPage: page, totalItems: numResults }">
+        <movie [title]="movie.title" [poster]="movie.poster_path" [desc]="movie.overview"></movie>
+    </ul>
+  </div>
+  
+  <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>

@@ -1,0 +1,50 @@
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  background: black;
+}
+
+.movieitem {
+  flex: 1 0 21%;
+  width: 20em;
+  text-align: center;
+  border: 1px solid white;
+  background: black;
+  color: white;
+}
+
+#nav {
+  background-color: black;
+  text-align: center
+}
+
+#nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  border: 1px solid black;
+}
+
+#nav li {
+  float: left;
+}
+
+#nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#nav li a:hover {
+  background-color: white;
+  color: black
+}
+
+.form-group {
+  margin: 1em;
+}
